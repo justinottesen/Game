@@ -1,7 +1,10 @@
 main: bin
 	clang-format -style=file -i src/*.cpp
-	g++ src/main.cpp -std=c++20 -Wall -Wextra -Werror -o bin/a.out
-	./bin/a.out
+	clang-tidy src/main.cpp --quiet --format-style=file --
+	g++ src/main.cpp -std=c++20 -Wall -Wextra -Werror -o bin/game
+
+run:
+	./bin/game
 
 bin:
 	mkdir -p bin

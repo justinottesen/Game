@@ -1,0 +1,8 @@
+
+# Include all except a few
+Checks: >
+  *,
+
+  -modernize-use-trailing-return-type,
+  -llvmlibc-*
+WarningsAsErrors: "*"
