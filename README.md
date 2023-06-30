@@ -1,7 +1,7 @@
 ## Requirements
 
 - g++ compiler, supporting C++20
-- clang, I use version 17 (used for clang-format and clang-tidy)
+- clang, I use version 14 (used for clang-format and clang-tidy)
 - make
 
 ## References
