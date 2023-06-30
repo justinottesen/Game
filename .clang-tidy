@@ -1,8 +1,10 @@
-
-# Include all except a few
 Checks: >
   *,
 
+  -altera-unroll-loops,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -llvm-header-guard,
+  -llvmlibc-*,
   -modernize-use-trailing-return-type,
-  -llvmlibc-*
+  -readability-magic-numbers
 WarningsAsErrors: "*"

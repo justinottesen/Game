@@ -1,9 +1,8 @@
 ## Requirements
 
 - g++ compiler, supporting C++20
-- clang-format, minimum version 14
+- clang, I use version 17 (used for clang-format and clang-tidy)
 - make
-- clang-tidy (I don't know what version but I have 14.0.0)
 
 ## References
 

@@ -43,9 +43,12 @@ BraceWrapping:
   SplitEmptyFunction:       false
   SplitEmptyRecord:         false
   SplitEmptyNamespace:      false
+BracedInitializerIndentWidth:                 2
+BreakAfterAttributes:                         Never
 BreakBeforeBinaryOperators:                   None
 BreakBeforeBraces:                            Custom
 BreakBeforeConceptDeclarations:               true
+BreakBeforeInlineASMColon:                    OnlyMultiline
 BreakBeforeTernaryOperators:                  true
 BreakConstructorInitializers:                 AfterColon
 BreakInheritanceList:                         AfterComma
@@ -89,12 +92,23 @@ IndentCaseLabels:                             true
 IndentExternBlock:                            Indent
 IndentGotoLabels:                             false
 IndentPPDirectives:                           BeforeHash
+IndentRequiresClause:                         true
 IndentWidth:                                  2
 IndentWrappedFunctionNames:                   true
+InsertBraces:                                 true
+InsertNewlineAtEOF:                           true
 InsertTrailingCommas:                         None
+IntegerLiteralSeparator:
+  Binary:               8
+  Decimal:              3
+  DecimalMinDigits:     7
+  Hex:                  2
+  HexMinDigits:         9
+KeepEmptyLinesAtEOF:                          false
 KeepEmptyLinesAtTheStartOfBlocks:             false
 LambdaBodyIndentation:                        Signature
 Language:                                     Cpp
+LineEnding:                                   LF
 MacroBlockBegin:                              ''
 MacroBlockEnd:                                ''
 MaxEmptyLinesToKeep:                          1
@@ -151,6 +165,8 @@ RawStringFormats:
       - ParsePartialTestProto
     CanonicalDelimiter:   pb
     BasedOnStyle:         google
+RequiresClausePosition:                       OwnLine
+RequiresExpressionIndentation:                OuterScope
 ReferenceAlignment:                           Pointer
 ReflowComments:                               true
 RemoveBracesLLVM:                             false
