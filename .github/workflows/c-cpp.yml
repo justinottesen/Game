@@ -1,19 +1,17 @@
-name: C/C++ CI
+name: Build Project
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+on: [push, pull_request]
 
 jobs:
-  build:
-
+  Clang-Tidy:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
-    - name: clang-tidy
-      run: make tidy
+    - name: clang tidy
+      run: clang-tidy --quiet --format-style=file src/* -- -x c++
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
     - name: make
       run: make
