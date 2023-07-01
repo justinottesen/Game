@@ -1,10 +1,14 @@
 Checks: >
   *,
 
+  -altera-struct-pack-align,
   -altera-unroll-loops,
   -cppcoreguidelines-avoid-magic-numbers,
+  -fuchsia-overloaded-operator,
   -llvm-header-guard,
   -llvmlibc-*,
   -modernize-use-trailing-return-type,
   -readability-magic-numbers
 WarningsAsErrors: "*"
+CheckOptions:
+  misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic: true

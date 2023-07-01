@@ -67,19 +67,16 @@ $(BIN):
 	mkdir -p $(BIN)
 
 $(OBJ)/%.o: $(SRC)/%.c
-	clang-format -style=file -i $<
-	clang-tidy --quiet --format-style=file $< --
 	$(COMPILE.c) $<
 
 $(OBJ)/%.o: $(SRC)/%.cpp
-	clang-format -style=file -i $<
-	clang-tidy --quiet --format-style=file $< -- -x c++
 	$(COMPILE.cxx) $<
 
 # clang-tidy on headers
 .PHONY: tidy
 tidy: $(HEADERS)
-	clang-tidy --quiet --format-style=file src/* -- -x c++
+	clang-format -style=file -i src/*
+	clang-tidy --format-style=file src/* -- -x c++ -std=c++20
 
 # force rebuild
 .PHONY: remake

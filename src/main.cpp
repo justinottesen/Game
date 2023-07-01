@@ -1,6 +1,7 @@
 #include "Engine.h"
 
-int main() {
+int main()
+{
   Engine engine;
 
   engine.run();
